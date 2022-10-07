@@ -14,7 +14,7 @@
 
 ### Screenshot
 
-![](./screenshots/desktop.jpg)
+![](./screenshots/Desktop.jpg)
 <p align="center">
   <img src="./screenshots/mobile.jpg"/>
 <p>
