@@ -17,7 +17,7 @@ form.addEventListener('submit', e => {
   if(itTask.value != ''){
     createTask(itTask.value);
     itTask.value = '';
-      renderTasks();
+    renderTasks();
   }
 })
 
@@ -27,7 +27,7 @@ function createTask(value){
     title: value,
     completed: false
   };
-
+  
   tasks.unshift(newTask);
 }
 
@@ -103,7 +103,7 @@ function timerBreakHandler(){
     clearInterval(timerBreak);
     current = null;
     timerBreak = null;
-    taskName.textContent = '';
+    taskName.textContent = 'Inicie otra actividad 😊';
     renderTasks();
   }
 }

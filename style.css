@@ -2,6 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 
+:root {
+  --purple: #3B1D59;
+  --water-green: #03A696;
+  --cream: #F2E3D0;
+  --orange: #F2785C;
+  --mustard: #F2A35E;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -13,18 +21,18 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #452066;
+  background-color: var(--purple);
 }
 
 .container {
-  width: 80%; /*desktop: 70%*/
-  height: 90%; /*desktop: 70%*/
+  width: 80%;
+  height: 90%;
   display: flex;
   flex-direction: column;
   border: 1px solid black;
   align-items: center;
   padding: 15px;
-  background-color: #3B1D59;
+  background-color: var(--mustard);
 }
 
 #time {
@@ -36,21 +44,21 @@ body {
 }
 
 h1 {
-  font-size: 2.5em; /*desktop: 4em*/
+  font-size: 2.5em;
   font-family: 'Poppins', sans-serif;
-  color: #F2785C;
+  color: var(--purple);
 }
 
 #value {
   font-size: 4em;
   font-family: 'Silkscreen', cursive;
-  color: #03A696;
+  color: var(--water-green);
 }
 
 #taskName {
   font-size: 1.5em;
   font-family: 'Poppins', sans-serif;
-  color: #F2A35E;
+  color: var(--purple);
 }
 
 .tasks-container {
@@ -68,14 +76,45 @@ h1 {
   padding: 10px;
   border-radius: 10px;
   border: 1px solid black;
-  background-color: #F2A35E;
+  background-color: var(--cream);
 }
 
+/*btnAdd*/
+
 #btnAdd {
-  width: 40%; /*desktop: 30%*/
-  height: 30px;
-  margin: 10px auto;
+  position: relative;
+  display: inline-block;
+  width: 50%;
+  height: 40px;
+  margin: 20px auto;
+  background: var(--purple);
+  color: var(--mustard);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  line-height: normal;
+  border: 0;
+  border-radius: 0.4rem;
+  box-shadow: -1px 1px 8px rgba(0, 0, 0, 0.4);
+  appearance: none;
+  cursor: pointer;
+  transition: background 250ms, box-shadow 250ms;
 }
+
+#btnAdd:hover {
+  background: var(--purple);
+  box-shadow: -2px 2px 16px rgba(0, 0, 0, 0.6);
+}
+
+#btnAdd:active,
+#btnAdd:focus {
+  outline: none;
+}
+
+#btnAdd:active {
+  box-shadow: -4px 4px 24px rgba(0, 0, 0, 0.8);
+}
+
+/*btnAdd*/
 
 #tasks {
   width: 90%;
@@ -91,14 +130,14 @@ h1 {
 
 .task {
   padding: 10px;
-  background-color: #F2A35E;
+  background-color: var(--cream);
   border-radius: 10px;
 }
 
 .title {
   font-size: 1.2em;
   font-family: 'Poppins', sans-serif;
-  color: #F2E3D0;
+  color: var(--purple);
 }
 
 .start-button{
@@ -106,9 +145,38 @@ h1 {
   height: 40px;
   margin-top: 10px;
   margin-left: 70%;
+  background: var(--purple);
+  color: var(--mustard);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  line-height: normal;
+  border: 0;
+  border-radius: 0.4rem;
+  box-shadow: -1px 1px 8px rgba(0, 0, 0, 0.4);
+  appearance: none;
+  cursor: pointer;
 }
 
 .done {
-  color: #1A0935;
+  color: var(--orange);
   font-family: 'Poppins', sans-serif;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    width: 70%;
+  }
+
+  h1{
+    font-size: 4em;
+  }
+
+  #btnAdd {
+    width: 20%;
+  }
+
+  .start-button {
+    width: 16%;
+    margin-left: 84%;
+  }
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,24 +8,29 @@
   <title>Pomodoro-WebApp</title>
   <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
   <div class="container">
 
     <div id="time">
       <h1>POMODORO</h1>
       <div id="value"></div>
-      <div id="taskName"><p>Sin Tareas</p></div>
+      <div id="taskName">
+        <p>Inicie una actividad 😎</p>
+      </div>
     </div>
 
     <div class="tasks-container">
       <form id="form">
         <input type="text" id="itTask">
-        <input type="submit" id="btnAdd" value="Agregar Tarea">
+        <button type="submit" id="btnAdd" value="Agregar Tarea">
+          <span class="text">Agregar Tarea</span>
+        </button>
       </form>
     </div>
 
     <div id="tasks"></div>
-  </div>  
+  </div>
   <script src="./main.js"></script>
 </body>
 </html>
